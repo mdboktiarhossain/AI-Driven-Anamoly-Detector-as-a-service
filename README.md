@@ -107,10 +107,10 @@ This system consists of three main components working together to provide intell
 
 #### 1.3 Create Virtual Machine
 1. Open VirtualBox and click **New**
-2. **Name**: Give your VM a name (e.g., "naz")
+2. **Name**: Give your VM a name (e.g., "osu")
 3. **ISO Image**: Select the downloaded Ubuntu ISO from your Downloads folder
-4. **Username & Password**: Set both to "naz" (or your preferred username)
-5. **Hostname**: Set to "naz" (or your preferred hostname)
+4. **Username & Password**: Set both to "osu" (or your preferred username)
+5. **Hostname**: Set to "osu" (or your preferred hostname)
 6. **Memory**: Allocate 5000 MB (5GB) - adjust based on your host machine capacity
 7. **CPU**: Allocate 5 CPU cores - adjust based on your host machine capacity
 8. **Hard Disk**: Allocate 60 GB
@@ -136,7 +136,7 @@ root    ALL=(ALL:ALL) ALL
 
 Add your username below it:
 ```
-naz     ALL=(ALL:ALL) ALL
+osu     ALL=(ALL:ALL) ALL
 ```
 
 **Save and exit**: Press `Ctrl+X`, then `Y`, then `Enter`
@@ -171,13 +171,13 @@ apt-cache policy docker-ce
 sudo apt install docker-ce
 
 # Add user to docker group
-sudo usermod -aG docker naz
+sudo usermod -aG docker n
 
 # Restart VM to apply group changes
 sudo reboot
 ```
 
-**After restart, log back in as your user (naz)**
+**After restart, log back in as your user (osu)**
 
 #### 3.3 Install kubectl
 ```bash
@@ -210,7 +210,7 @@ cd ~/Downloads
 tar -xzf istio-1.24.2-linux-amd64.tar.gz
 
 # Export Istio to PATH
-export PATH=$PATH:/home/naz/Downloads/istio-1.24.2-linux-amd64/istio-1.24.2/bin
+export PATH=$PATH:/home/osu/Downloads/istio-1.24.2-linux-amd64/istio-1.24.2/bin
 
 # Install Istio
 istioctl install --set profile=default
@@ -240,10 +240,10 @@ kubectl label namespace default istio-injection=enabled
 #### 4.2 Deploy Bookinfo Application
 ```bash
 # Deploy Bookinfo microservices
-kubectl apply -f /home/naz/Downloads/istio-1.24.2-linux-amd64/istio-1.24.2/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -f /home/osu/Downloads/istio-1.24.2-linux-amd64/istio-1.24.2/samples/bookinfo/platform/kube/bookinfo.yaml
 
 # Deploy Bookinfo gateway
-kubectl apply -f /home/naz/Downloads/istio-1.24.2-linux-amd64/istio-1.24.2/samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl apply -f /home/osu/Downloads/istio-1.24.2-linux-amd64/istio-1.24.2/samples/bookinfo/networking/bookinfo-gateway.yaml
 ```
 
 #### 4.3 Get Access URL
@@ -266,7 +266,7 @@ echo "http://$GATEWAY_URL/productpage"
 #### 5.1 Clone Repository
 ```bash
 # Clone the repository
-git clone https://github.com/nazrulhuda/AI-Driven-Anamoly-Detector-as-a-service.git
+git clone https://github.com/osurulhuda/AI-Driven-Anamoly-Detector-as-a-service.git
 
 # Navigate to the repository
 cd AI-Driven-Anamoly-Detector-as-a-service
